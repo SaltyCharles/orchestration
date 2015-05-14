@@ -1,0 +1,25 @@
+######################################################
+### /etc/salt/cloud.maps.d/docker-with-haproxy.map ###
+######################################################
+u14_512:
+  - haproxy:
+      minion:
+        mine_functions:
+          network.ip_addrs:
+            interface: eth0
+        grains:
+          roles: haproxy
+  - docker01:
+      minion:
+        mine_functions:
+          network.ip_addrs:
+            interface: eth0
+        grains:
+          roles: docker
+  - docker02:
+      minion:
+        mine_functions:
+          network.ip_addrs:
+            interface: eth0
+        grains:
+          roles: docker
