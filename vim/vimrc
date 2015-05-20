@@ -26,6 +26,7 @@ set directory=~/.vim/swaps
 if exists("&undodir")
         set undodir=~/.vim/undo
 endif
+" set directory=.,$TEMP
 
 set viminfo+=! " make sure vim history works
 map <C-J> <C-W>j<C-W>_ " open and maximize the split below
